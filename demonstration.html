@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>jQuery.highlightRegex() demonstration</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+  <script src="jquery.highlightRegex.js"></script>
+  <script type='text/javascript'>
+     //<![CDATA[
+       $(function() {
+         $('#toggle-link').toggle(function(){
+           regex = /[aeiou]/ig
+           $('#regex').text(regex);
+           $('#content').highlightRegex(regex);
+           $(this).text("click to clear");
+         }, function(){
+           $('#content').highlightRegex();
+           $(this).text('click to re-highlight');
+         })
+         
+         $('#fancy-input').keyup(function(){
+           $('#fancy-text').highlightRegex();
+           if($(this).val() != '') {
+             $('#fancy-text').highlightRegex(new RegExp($(this).val(), 'ig'));
+           }
+         })
+       });
+     //]]>
+   </script>
+   <style>
+    .highlight {
+      background: yellow;
+      text-decoration: underline;
+    }
+    
+    #fancy-text {
+      float: left;
+      padding:10px;
+      margin: 0 10px 20px ;
+      border: 3px double red;
+    }
+    
+    #fancy-input {
+      font-size: 100%;
+      background: #ABC;
+    }
+    
+    #input {
+      clear:left;
+      font-size: 200%;
+    }
+   </style>
+</head>
+
+<body>
+  <h1> jQuery highlightRegex Demonstration</h1>
+  <h2> Static </h2>
+  <div id="content">This is some text that will be highlighted with the regex <span id='regex'></span></div>
+  <a href='#' id='toggle-link'>click to highlight</a>
+  <hr/>
+  <h2> Dynamic </h2>
+  <div id='fancy-text'>
+    <h3>Type in the input field below to highlight anything in this outlined box.</h3>
+    <code><pre>(case insensitive and global)</code></pre>
+    <ul>
+      <li> You can use regular expressions.</li>
+      <li> It highlights children nodes recursively. </li>
+    </ul>
+  </div>
+  <div id='input'>Type Here: /<input type='text' id='fancy-input'/>/ig</div>
+</body>
+</html
