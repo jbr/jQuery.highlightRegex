@@ -15,7 +15,8 @@
       $(this).find('span.highlight').each(function(){
         $(this).replaceWith($(this).text());
         $(this).parent().each(function(){
-          $(this).get(0).normalize();
+          node = $(this).get(0);
+          if(node.normalize) node.normalize();
         });
       });
     } else {
