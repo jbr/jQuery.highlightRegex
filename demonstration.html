@@ -17,9 +17,15 @@
          })
          
          $('#fancy-input').keyup(function(){
+           var regex;
            $('#fancy-text').highlightRegex();
-           if($(this).val() != '') {
-             $('#fancy-text').highlightRegex(new RegExp($(this).val(), 'ig'));
+           try { regex = new RegExp($(this).val(), 'ig') }
+           catch (e) { $('#fancy-input').addClass('error') }
+
+           if (typeof regex !== 'undefined') {
+             $(this).removeClass('error');
+             if ($(this).val() != '')
+               $('#fancy-text').highlightRegex(regex);
            }
          })
        });
@@ -41,6 +47,10 @@
     #fancy-input {
       font-size: 100%;
       background: #ABC;
+    }
+
+    #fancy-input.error {
+      background: red;
     }
     
     #input {
@@ -67,4 +77,4 @@
   </div>
   <div id='input'>Type Here: /<input type='text' id='fancy-input'/>/ig</div>
 </body>
-</html
+</html>
