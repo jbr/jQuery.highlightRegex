@@ -5,7 +5,7 @@ Want to highlight some text on a page with information you only know in javascri
 
 h3. Demonstration
 
-Check out a simple demo "here.":http://www.jacobrothstein.com/highlightRegex/demonstration.html (source included in this repository).
+Check out a simple demo "here.":http://jbr.github.com/jQuery.highlightRegex (source included in this repository).
 
 h3. Usage
 
