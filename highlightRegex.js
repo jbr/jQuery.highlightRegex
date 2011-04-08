@@ -87,8 +87,8 @@
 
               if ( match.length > 0 ) {
 
-                spannode = document.createElement( options.className )
-                spannode.className = options.tagType
+                spannode = document.createElement( options.tagType )
+                spannode.className = options.className
 
                 parent      = searchnode.parentNode
                 middlebit   = searchnode.splitText( pos )
