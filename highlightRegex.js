@@ -1,5 +1,5 @@
 /*
- * jQuery Highlight Regex Plugin
+ * jQuery Highlight Regex Plugin v0.1.0
  *
  * Based on highlight v3 by Johann Burkard
  * http://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html
