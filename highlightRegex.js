@@ -47,11 +47,17 @@
 
 
 
-  $.fn.highlightRegex = function( regex ) {
+  $.fn.highlightRegex = function( regex, options ) {
+
+    if ( typeof options === 'undefined' ) options = {}
+
+    options.className = options.className || 'highlight'
+    options.tagType   = options.tagType   || 'span'
 
     if ( typeof regex === 'undefined' || regex.source === '' ) {
 
-      $( this ).find( 'span.highlight' ).each( function() {
+      $( this ).find( options.tagType + '.' + options.className ).each( function() {
+
         $( this ).replaceWith( $( this ).text() )
 
         normalize( $( this ).parent().get( 0 ))
@@ -81,8 +87,8 @@
 
               if ( match.length > 0 ) {
 
-                spannode = document.createElement( 'span' )
-                spannode.className = 'highlight'
+                spannode = document.createElement( options.className )
+                spannode.className = options.tagType
 
                 parent      = searchnode.parentNode
                 middlebit   = searchnode.splitText( pos )
