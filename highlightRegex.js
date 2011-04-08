@@ -103,7 +103,7 @@
 
           } else {
 
-            $( searchnode ).highlightRegex( regex )
+            $( searchnode ).highlightRegex( regex, options )
 
           }
         })
