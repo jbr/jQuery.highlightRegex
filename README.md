@@ -29,3 +29,8 @@ If you'd like to wrap with a different sort tag and/or class, use
       className: 'andHale'
     });
 
+Additional attributes can be set on the created tag
+
+    $('#jquery.selector').highlightRegex( /some ([rR]egex)/, {
+      attrs: {'data-color': 'blue'}
+    });
