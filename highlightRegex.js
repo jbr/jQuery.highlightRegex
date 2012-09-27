@@ -53,6 +53,7 @@
 
     options.className = options.className || 'highlight'
     options.tagType   = options.tagType   || 'span'
+    options.attrs     = options.attrs     || {}
 
     if ( typeof regex === 'undefined' || regex.source === '' ) {
 
@@ -89,6 +90,7 @@
 
                 spannode = document.createElement( options.tagType )
                 spannode.className = options.className
+                $(spannode).attr(options.attrs)
 
                 parent      = searchnode.parentNode
                 middlebit   = searchnode.splitText( pos )
