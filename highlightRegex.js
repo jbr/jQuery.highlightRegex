@@ -1,10 +1,10 @@
 /*
- * jQuery Highlight Regex Plugin v0.1.1
+ * jQuery Highlight Regex Plugin v0.1.2
  *
  * Based on highlight v3 by Johann Burkard
  * http://johannburkard.de/blog/programming/javascript/highlight-javascript-text-higlighting-jquery-plugin.html
  *
- * (c) 2009-10 Jacob Rothstein
+ * (c) 2009-13 Jacob Rothstein
  * MIT license
  */
 
@@ -48,6 +48,11 @@
 
 
   $.fn.highlightRegex = function( regex, options ) {
+
+    if ( typeof regex === 'object' && regex.constructor.name !== 'RegExp' ) {
+      options = regex
+      regex = undefined
+    }
 
     if ( typeof options === 'undefined' ) options = {}
 
