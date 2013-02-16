@@ -29,6 +29,16 @@ If you'd like to wrap with a different sort tag and/or class, use
       className: 'andHale'
     });
 
+If you'd like to specify a palette of classes so that each match group is styled differently, use:
+
+    $('#jquery.selector').highlightRegex( /some ([rR]egex)/, {
+      tagType:   'strong',
+      className: 'andHale',
+      palette:   ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+    });
+
+Note: colours are recycled if there are more match groups than colours.
+
 Additional attributes can be set on the created tag
 
     $('#jquery.selector').highlightRegex( /some ([rR]egex)/, {
