@@ -10,7 +10,7 @@ place.
 ## Demonstration
 
 Check out a simple demo
-[here](http://jbr.github.com/jQuery.highlightRegex)
+[here](http://jbr.github.io/jQuery.highlightRegex)
 (source included in this repository).
 
 ## Usage
