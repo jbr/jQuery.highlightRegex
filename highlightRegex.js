@@ -59,6 +59,7 @@
     options.className = options.className || 'highlight'
     options.tagType   = options.tagType   || 'span'
     options.attrs     = options.attrs     || {}
+    options.palette   = options.palette   || []
 
     if ( typeof regex === 'undefined' || regex.source === '' ) {
 
@@ -89,12 +90,15 @@
             while ( searchnode.data &&
                     ( pos = searchnode.data.search( regex )) >= 0 ) {
 
-              match = searchnode.data.slice( pos ).match( regex )[ 0 ]
+              exec = regex.exec( searchnode.data.slice( pos ) )
+              index = exec.lastIndexOf(exec[0]) - 1
+              match = exec[0]
 
               if ( match.length > 0 ) {
 
                 spannode = document.createElement( options.tagType )
                 spannode.className = options.className
+                if (options.palette.length) spannode.className = spannode.className +' '+ options.palette[index % options.palette.length]
                 $(spannode).attr(options.attrs)
 
                 parent      = searchnode.parentNode
