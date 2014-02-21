@@ -1,0 +1,24 @@
+{
+  "name": "jQuery.highlightRegex",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jbr/jQuery.highlightRegex",
+  "authors": [
+    "Jacob Rothstein <hi@jbr.me>"
+  ],
+  "description": "Regular-expression highlighter for jQuery",
+  "main": "highlightRegex.js",
+  "keywords": [
+    "jQuery",
+    "highlighter",
+    "regular expression",
+    "regex"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "index.html",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
