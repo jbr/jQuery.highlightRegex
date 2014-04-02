@@ -85,6 +85,11 @@
           normalize( searchnode )
 
           if ( searchnode.nodeType == 3 ) {
+            
+            // don't re-highlight the same node over and over
+            if ( $(searchnode).parent(options.tagType + '.' + options.className).length ) {
+                return;
+            }
 
             while ( searchnode.data &&
                     ( pos = searchnode.data.search( regex )) >= 0 ) {
