@@ -49,7 +49,7 @@
 
   $.fn.highlightRegex = function( regex, options ) {
 
-    if ( typeof regex === 'object' && regex.constructor.name !== 'RegExp' ) {
+    if ( typeof regex === 'object' && !(regex.constructor.name == 'RegExp' || regex instanceof RegExp ) ) {
       options = regex
       regex = undefined
     }
