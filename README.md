@@ -13,6 +13,9 @@ Check out a simple demo
 [here](http://jbr.github.io/jQuery.highlightRegex)
 (source included in this repository).
 
+## Bower Installation
+    `bower install jquery-highlightRegex --save`
+
 ## Usage
 
     $('#any.jquery.selector').highlightRegex(/[aeiou]/ig);
