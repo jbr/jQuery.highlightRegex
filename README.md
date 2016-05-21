@@ -9,9 +9,9 @@ place.
 
 ## Demonstration
 
-Check out a simple demo
-[here](http://jbr.github.io/jQuery.highlightRegex)
-(source included in this repository).
+Check out a simple demo [here](http://jbr.github.io/jQuery.highlightRegex)
+(source included in this repository). Alternatively have a look at
+[this pen](http://codepen.io/julmot/full/KzrPYB/).
 
 ## Bower Installation
     `bower install jquery-highlightRegex --save`
