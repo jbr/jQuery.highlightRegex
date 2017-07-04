@@ -1,3 +1,13 @@
+# ⚠ Notice ⚠
+
+I extracted this library from a project in 2009. It did everything I
+needed it to, and maybe it helped a few people. I no longer personally
+recommend building websites using the DOM as data like jQuery
+does. Newer alternatives to this library exist, although this still
+serves its intended function. This repo is partially maintained in
+that pull requests will be reviewed and bugs will be fixed, but I'm
+unlikely to add new behavior.
+
 # jQuery highlightRegex plugin
 
 Want to highlight some text on a page with information you only
